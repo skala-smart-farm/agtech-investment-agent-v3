@@ -1,0 +1,39 @@
+# Python 실행 환경 및 캐시
+.python-version
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 환경변수 및 API 키
+.env
+.env.*
+
+# 운영체제 및 편집기 설정
+.DS_Store
+.vscode/
+.ipynb_checkpoints/
+
+# 환경 스캐폴딩
+pyproject.toml
+uv.lock
+
+# 실행 중 생성되는 캐시
+cache/
+cache_fresh/
+
+# 재현용 캐시 중 문서 임베딩 캐시만 제외
+# FAISS 색인·문서 조각·질의 임베딩은 커밋하여 같은 검색 결과를 재현
+replay/emb/
+
+# 실행 과정에서 생성되는 데이터와 결과
+data/candidates/
+outputs/runs/
+*.log
+
+# 국민연금 원본 CSV는 용량이 크므로 제외
+# 회사별 조회 결과는 replay/snapshots/에 저장하여 커밋
+replay/nps/
+
+# 기존 실행 캐시 백업(대용량 파일 포함)
+cache_fresh_backup*/
